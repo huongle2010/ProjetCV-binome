@@ -46,21 +46,17 @@ input:checked + .slider {
     background-color:  rgb(17, 16, 16);
 }
 input:checked + .slider:before {
-    transform: translateX(26px);
-    
+    transform: translateX(26px); 
 }
 .slider.round {
     border-radius: 34px;
-   
 }
 .slider.round:before {
     border-radius: 50%;
 }
-
 :root {
     --primary-color: white;
-    --text-color: black;
-       
+    --text-color: black;    
 }
 [data-theme="dark"] {
     --primary-color: black;
@@ -73,9 +69,7 @@ body {
 }
 .resume{
 	width: 800px;
-	margin: 25px auto;
-    display: flex;
-    flex-direction: column;
+    margin: 25px auto;
 }
 header{
     height: 180px;
@@ -87,10 +81,10 @@ main{
 }
 footer{
     background-color: #C77C0C;
+    height: 80px;
 }
 
 /* ------------------------------------header---------------------------------------------------------- */
-
 header .avatar {
     height: 240px;
     width: 200px;
@@ -109,13 +103,13 @@ header .aboutme p{
 }
 h1{
     color: white;
+    padding-top: 20px;
     }
 h2{
     color: white;
     margin-top: -10px;
 }
 /* -------------------------------------contact infor---------------------------------------------------------- */
-
 main .contact{
     display: flex;
     color: white;
@@ -126,7 +120,6 @@ main .contact{
 main .card-info{
     position: relative;
     width: 250px;
-    height: 35px; 
 }
 main .card-info .logo{
     position: absolute;
@@ -134,7 +127,7 @@ main .card-info .logo{
 }
 main .card-info .text{
     margin-top: 0%;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 /* -------------------------------------content (size-box)---------------------------------------------------------- */
@@ -148,41 +141,37 @@ main .content .same {
     border-radius: 30px;
     width: 350px;
     margin-bottom: 20px;
+    position: relative;
 }
 main .content .left .exp{
     height:480px;
-    position: relative;
 }
 main .content .left .language{
     height:130px;
-    position: relative; 
 }
 main .content .left .loisir {
     height:200px;
-    position: relative;
 }
 main .content .right .compentence{
-    height:310px;
-    position: relative;
+    height:310px; 
 }
 main .content .right .formation{
-    height:520px;
-    position: relative;
+    height:520px;   
 }
 /* -------------------------------------content-titre---------------------------------------------------------- */
 main .content .titre{
     height: 5%;
 }
-main .content .titre .logo{
+main .content .titre .logo, h3{
     position: absolute;
     margin-top: 5%;
+}
+main .content .titre .logo{  
     margin-left: 10%;
     font-size: 30px;
     color: var(--text-color)
 }
 h3{
-    position: absolute;
-    margin-top: 5%;
     margin-left: 25%;
     color: #C77C0C;
 }
@@ -200,7 +189,7 @@ main .content .event ul li{
     margin-top: 20px;
     margin-bottom: 15px;
     align-items: center;
-   color: var(--text-color);
+    color: var(--text-color);
 }
 li{
     list-style: none;
@@ -267,8 +256,8 @@ main .content .loisir ul li .logo{
 /* -------------------------------------footer---------------------------------------------------------- */
 footer ul{
     display: flex;
-    align-content: space-around;
     justify-content: center;
+    margin: 0px;
 }
 footer ul li{
     margin: 20px;
