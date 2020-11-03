@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+html {
+    margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+/* ------------------------------------ Dark mode ----------------------- */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+.theme-switch input {
+    display:none;
+}
+.slider {
+    background-color: rgb(226, 222, 222);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+.slider:before {
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+input:checked + .slider {
+    background-color:  rgb(17, 16, 16);
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+    
+}
+.slider.round {
+    border-radius: 34px;
+   
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+
+:root {
+    --primary-color: white;
+    --text-color: black;
+       
+}
+[data-theme="dark"] {
+    --primary-color: black;
+    --text-color: white;
+}
+/* ----------------------------------Body-background------------------------------------------------------------- */
+body {
+    margin: auto;
+    font-family: 'Asap', sans-serif;
+}
+.resume{
+	width: 800px;
+	margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    height: 180px;
+    background-color: #C77C0C;
+}
+main{
+    background-color:  #4E4949;
+    height: 1050px;
+}
+footer{
+    background-color: #C77C0C;
+}
+
+/* ------------------------------------header---------------------------------------------------------- */
+
+header .avatar {
+    height: 240px;
+    width: 200px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 30px;
+}
+header .aboutme{
+    margin-left: 200px;
+    text-align: center;  
+}
+header .aboutme p{
+    font-weight: bold;
+    font-size: 15px;
+}
+h1{
+    color: white;
+    }
+h2{
+    color: white;
+    margin-top: -10px;
+}
+/* -------------------------------------contact infor---------------------------------------------------------- */
+
+main .contact{
+    display: flex;
+    color: white;
+    padding-top: 15px;
+    margin-left: 250px;
+    flex-wrap: wrap;
+}
+main .card-info{
+    position: relative;
+    width: 250px;
+    height: 35px; 
+}
+main .card-info .logo{
+    position: absolute;
+    margin-top: 0%;
+}
+main .card-info .text{
+    margin-top: 0%;
+    margin-left: 20px;
+}
+
+/* -------------------------------------content (size-box)---------------------------------------------------------- */
+main .content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+main .content .same {
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+main .content .left .exp{
+    height:480px;
+    position: relative;
+}
+main .content .left .language{
+    height:130px;
+    position: relative; 
+}
+main .content .left .loisir {
+    height:200px;
+    position: relative;
+}
+main .content .right .compentence{
+    height:310px;
+    position: relative;
+}
+main .content .right .formation{
+    height:520px;
+    position: relative;
+}
+/* -------------------------------------content-titre---------------------------------------------------------- */
+main .content .titre{
+    height: 5%;
+}
+main .content .titre .logo{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 10%;
+    font-size: 30px;
+    color: var(--text-color)
+}
+h3{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 25%;
+    color: #C77C0C;
+}
+/* -------------------------------------content - box list(exp + formation)---------------------------------------------------------- */
+main .content .event ul {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+main .content .event ul li{
+    margin: -10px;
+}
+.content .li-wrap{
+	display: flex;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    align-items: center;
+   color: var(--text-color);
+}
+li{
+    list-style: none;
+}
+.content .li-wrap .date {
+    width: 120px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.content .li-wrap .infor .name{
+   font-size: 15px;
+   font-weight: bold;
+}
+.content .li-wrap .infor .location{
+    font-size: 12px;
+    font-weight: normal;
+}
+.line .li-wrap .infor ::after{
+    content: "";
+	position: absolute;
+	top: 70px;
+	left: 120px;
+	width: 2px;
+	height: 80%;
+	background:#C77C0C;
+}
+/* -------------------------------------content-box (language + loisir)---------------------------------------------------------- */
+main .content .language .eng{
+    width: 200px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 12%;
+    color: var(--text-color)
+}
+main .content .compentence .software{
+   font-size: 14px;
+    margin-left: 30px ;
+    margin-top: 60px;
+    font-weight: bold;
+    color: var(--text-color)
+}
+main .content .compentence .star{
+    display: flex;
+}
+main .content .compentence .star .logo{
+    color:  #C77C0C;
+}
+main .content .loisir ul{
+    display: flex;
+   justify-content: center;
+   margin-left: -45px;
+   margin-top: 20%;
+}
+main .content .loisir ul li{
+    margin: 15px;
+    text-align: center;
+    color: var(--text-color)
+}
+main .content .loisir ul li .logo{
+    font-size: 20px;  
+}
+/* -------------------------------------footer---------------------------------------------------------- */
+footer ul{
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+}
+footer ul li{
+    margin: 20px;
+}
+footer ul li .logo{
+    font-size: 40px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
